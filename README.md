@@ -1,6 +1,6 @@
 <h1>Physhing</h1>
 
-<h2>DISCLAIMER &#xFE0F</h2>
+<h2>DISCLAIMER &#x26A0</h2>
 <br>
 <ul><li>This script is for educational use only.
 <li>Using this tool against someone without the "victim's" authorization is against the law.
