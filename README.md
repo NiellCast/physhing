@@ -9,5 +9,4 @@
 <h2>Run Physhing</h2>
 <pre>
 <ol><li><code>pip install -r requirements.txt</code>
-<li><code>python app.py<code></ol>
-</pre>
+<li><code>python app.py<code></ol></pre>
