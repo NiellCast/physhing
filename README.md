@@ -7,5 +7,7 @@
 <li>I am not responsible for criminal attitudes practiced with this tool!</ul>
 
 <h2>Run Physhing</h2>
-<ol><li>pip install -r requirements.txt
-<li>python app.py</ol>
+<pre>
+<ol><li><code>pip install -r requirements.txt</code>
+<li><code>python app.py<code></ol>
+</pre>
