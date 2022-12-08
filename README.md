@@ -2,7 +2,7 @@
 
 <h2>&#x26A0 DISCLAIMER &#x26A0</h2>
 <br>
-<ul><li>This script is for educational use only.
+<ul><li>This script is only for educational purpose.
 <li>Using this tool against someone without the "victim's" authorization is against the law.
 <li>I am not responsible for criminal attitudes practiced with this tool!</ul>
 
